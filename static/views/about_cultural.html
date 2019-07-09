@@ -1,0 +1,15 @@
+
+    <header id="inside-page-header">
+          <p>{{company_description.description}}</p>
+    </header>
+        <section id="about-cultural">
+            <!--p class="lead">{{company_description.point}}</p-->
+            <img ng-src="{{company_description.image}}" />
+               <ul>
+                   <li ng-repeat="item in company_description.cultural">
+                       <p class="lead">{{item.lead}}</p>
+                       <p class="eng">{{item.eng}}</p>
+                       <p>{{item.content}}</p>
+                   </li>
+               </ul>
+        </section>

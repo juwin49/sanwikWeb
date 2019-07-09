@@ -1,0 +1,55 @@
+#joinus-list #joinus_environment img{
+padding:35px 0px ;
+}
+
+#joinus-list #inforback{
+    z-index: -99;
+}
+
+#joinus-list .information{
+    padding: 10px 20px;
+}
+
+#joinus-list .information #inforitem{
+    padding-top: 20px;
+    color: #198cce;
+    font-size: 1.08em;
+    font-weight:bold;
+    line-height: 2em;
+}
+
+#joinus-list .title p{
+    line-height: 1.8em;
+    font-size:1em;
+    font-weight: bold;
+}
+
+#joinus-list .content{
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 0.85em;
+}
+
+
+#joinus-list  #float{
+    z-index: 99;
+    position: fixed;
+    width: 250px;
+    height: 138px;
+    /*background-image: url(../images/namecard.png);*/
+    background:url(../images/namecard.png) 0px 0px no-repeat;
+    margin-left: 450px;
+    top: 236px;
+   /* border: 1px solid #bbb;*/
+
+
+}
+
+#joinus-list #float .float{
+    /*text-align: center;*/
+    font-weight: bold;
+    padding: 45px 0px 0px 60px;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+

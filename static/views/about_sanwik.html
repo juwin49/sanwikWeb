@@ -1,0 +1,16 @@
+
+
+        <div id="about-sanwik" class="clearfix">
+
+            <h1>{{company_description.h1}}</h1>
+            <p class="title">{{company_description.h2}}</p>
+            <p>{{company_description.h3}}</p>
+
+            <ul>
+                <li ng-repeat="item in company_description.sanwik">
+                    <p class="lead">{{item.lead}}</p>
+                    <p>{{item.content}}</p>
+                </li>
+            </ul>
+            <img ng-src="{{company_description.image}}">
+        </div>

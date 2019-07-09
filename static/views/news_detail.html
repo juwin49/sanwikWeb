@@ -1,0 +1,60 @@
+<div id="inside-page">
+
+	<nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+	<section id="news-detail" class="clearfix inside-page-content">
+        <div id="news-title" >
+			<h1 ng-bind-html="news.title" ></h1>
+			<span class="rightspan">{{news.time}}</span>
+        </div>
+
+       <!-- <div id="summary"><div><p>{{news.summary}}</p></div></div>-->
+        <div id="img">
+            <div id="large">
+                  <div id="left" ><a><span  id="leftspan" ng-click="preImg()"><i class="fa fa-chevron-left " ></i></span></a></div>
+                  <div id="middle"><div class="table-cell"><a><img ng-src="{{currentImg}}"></a></div></div>
+                  <div id="right" ><a><span id="rightspan" class="rightspan" ng-click="nextImg()"><i class="fa fa-chevron-right "></i></span></a></div>
+            </div>
+            <div id="small">
+                <div id="small-block">
+			       <span  ng-repeat="detail in small_img" ng-click="choose_img($index)" ng-class="{active: $index==0}" >
+				        <img  ng-src="{{detail}}" />
+			       </span>
+                </div>
+            </div>
+        </div>
+        <!--div id="video">
+            <div>
+              <video id="mv" ng-src="{{news.video_url}}" loop>您的浏览器不支持</video>
+              <i id="play" class="fa fa-play fa-2x" ng-click="play_pause()"></i>
+              <i id="pause" class="fa fa-pause fa-2x" ng-click="play_pause()"></i>
+            </div>
+        </div-->
+        <div id="video">
+            <div>
+                <div id="mv">
+                    <object id="flash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="432" height="240" >
+                       <param name="movie" value="/static/images/video/newsVideo.swf" />
+                       <param name="quality" value="high" />
+                       <embed src="/static/images/video/newsVideo.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="432" height="240"></embed>
+                    </object>
+
+                    <!--<video id="mv" ng-src="{{news.video_url}}" loop>ÄúµÄä¯ÀÀÆ÷²»Ö§³Ö</video>-->
+                    <i id="play" class="fa fa-play fa-2x" ng-click="play_pause()"></i>
+                    <i id="pause" class="fa fa-pause fa-2x" ng-click="play_pause()"></i>
+                </div>
+            </div>
+        </div>
+
+		<div class="intro" ><p ng-repeat="content in news.p" ng-bind-html="content"></p></div>
+
+	</section>
+
+    <section id="news-special" class="clearfix inside-page-content">
+        <div id="specialtitle">
+            <h3 style='color: #008dd7;font-weight:bold;font-size:1.51em;padding-top:10px;padding-left:15px'>公交车载自助充值终端</h3>
+            <h2 style='color: #221814;font-size:2.5em;padding-bottom:4px;border-bottom:6px solid #9fd9f7;padding-left:13px'>日交易总额突破<span style='color: red;font-weight:bold;letter-spacing:10px'> 2万元</span></h2>
+        </div>
+        <div class="intro" ><p ng-repeat="content in news.special" ng-bind-html="content"></p></div>
+    </section>
+
+</div>

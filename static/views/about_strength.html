@@ -1,0 +1,36 @@
+
+        <header id="inside-page-header">
+            <p>{{company_description.description}}</p>
+        </header>
+       <div id="about-strength">
+           <p class="lead">{{company_description.literal[0].lead}}</p>
+           <p>{{company_description.literal[0].content}}</p>
+           <p class="bold">{{company_description.literal[0].bold}}<a href=""></a></p>
+           <div class="patent">
+               <ul>
+                   <li class="file" ng-repeat="item in company_description.timage">
+                       <img ng-src="{{item.img}}">
+                       <span>{{item.span}}</span>
+                   </li>
+               </ul>
+               <ul>
+                   <li class="img" ng-repeat="item in company_description.fimage">
+                       <img ng-src="{{item.img}}">
+                       <span>{{item.span}}</span>
+                   </li>
+               </ul>
+           </div>
+           <p class="lead">{{company_description.literal[1].lead}}</p>
+           <p ng-repeat="item in company_description.literal[1].content">{{item}}</p>
+           <p class="bold">{{company_description.literal[1].bold}}<i class="fa fa-hand-o-right"></i><a href="/about/2/2">查看所有</a></p>
+           <div class="patent">
+                   <ul>
+                       <li class="img" ng-repeat="item in company_description.himage">
+                          <img ng-src="{{item.img}}">
+                          <span>{{item.span}}</span>
+                       </li>
+                   </ul>
+
+           </div>
+
+       </div>

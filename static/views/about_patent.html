@@ -1,0 +1,46 @@
+
+
+<div id="inside-page" class="clearfix">
+    <nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+
+    <article id="about-us" class="clearfix inside-page-content">
+
+
+        <header id="inside-page-header">
+            <p>公司专利</p>
+        </header>
+        <section id="about-patent">
+            <div>
+              <div id="patent-content">
+                <ul>
+                    <li ng-repeat="item in patents |offset: currentpage*pagesize| limitTo: pagesize">
+                        <div id="smallimg">
+                            <img  ng-src="{{item.smallimg}}">
+                            <a ng-click="enlarge(item,$index)"><i class="fa fa-search-plus "></i>
+
+                            </a>
+                        </div>
+                        <span>{{item.name}}</span>
+                        <div id="bigimgdiv" >
+                            <img id="bigimg" ng-src="{{big}}" />
+                        </div>
+
+                    </li>
+                </ul>
+              </div>
+              <div class="foot">
+                <div id="patent-page" >
+                    <a ng-click="firstPage()">首页</a>
+                    <a ng-click="prevPage()">上一页</a>
+                    <a>{{currentpage+1}}/{{pagecount}}</a>
+                    <a ng-click="nextPage()">下一页</a>
+                    <a ng-click="lastPage()">尾页</a>
+                    <input type="text"  ng-model="inputPage">
+                    <button ng-click="gotoPage(inputPage)">go</button>
+                </div>
+              </div>
+            </div>
+        </section>
+
+    </article>
+</div>

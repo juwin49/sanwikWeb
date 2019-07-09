@@ -1,0 +1,17 @@
+<div id="secondary-nav-inner">
+	<span class="page-name">{{SecondaryNav.menu}}</span>
+	<ul class="clearfix">
+		<li ng-repeat="menu in SecondaryNav.sub_menu" >
+			<a class="secondary-menu" ng-href="/{{SecondaryNav.page_name}}/{{$index+1}}" ng-class="{active: page == $index}">{{menu}}</a>
+			
+		</li>
+	</ul>
+
+        <span class="connect-us">联系方式</span>
+        <ul>
+            <li>电&nbsp;&nbsp;话：0756-6865889 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0756-6865890</li>
+            <li>传&nbsp;&nbsp;真：0756-2265162</li>
+            <li>地&nbsp;&nbsp;址：珠海市南屏科技园屏工西路11号</li>
+        </ul>
+
+</div>

@@ -1,0 +1,10 @@
+<ul id="page-menu" class="clearfix">
+	<li ng-repeat="menu in menus" ng-class="{active: page == $index }" class="first-menu">
+		<a ng-href="/{{menu.page_name}}{{menu.page_name?'/1':''}}">{{menu.menu}}</a>
+		<ul ng-if="menu.sub_menu.length > 0" class="sub-menu clearfix">
+			<li ng-repeat="sub_menu in menu.sub_menu">
+				<a ng-href="/{{menu.page_name}}/{{$index+1}}">{{sub_menu}}</a>
+			</li>
+		</ul>
+	</li>
+</ul>

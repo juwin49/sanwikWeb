@@ -1,0 +1,131 @@
+
+<section id="banner">
+
+
+    <div class="banner1 banner">
+      <div id="banner1">
+        <h1>自助服务终端</h1>
+        <span class="word">
+        <p class="ch1">交通、酒店、餐饮、<br/>旅游、石化、通讯、</p>
+        <p class="en1">Traffic、Hotel、Food and Beverage、<br/>Travel、Petrifaction、Communication.</p>
+        <p class="ch2">一站式自助收费系统</p>
+        <p class="en2">One-stop Automatic Payment Basics</p>
+        </span>
+      </div>
+    </div>
+
+    <div class="banner2 banner">
+       <div id="banner2">
+        <h1>自助服务终端</h1>
+        <span class="word">
+        <p class="ch1">水电、物业、<br/>有线电视、机动车违章</p>
+        <p class="en1">Water and Electrity、Property、<br/>Limited Television、Locomotive Illegal.</p>
+        <p class="ch2">一站式自助收费系统</p>
+        <p class="en2">One-stop Automatic Payment Basics</p>
+        </span>
+       </div>
+    </div>
+
+    <div class="banner3 banner">
+      <div id="banner3">
+        <h1>自助服务终端</h1>
+        <span class="word">
+        <p class="ch1">金融<p>Financial</p></p>
+            <p class="en1">外币自助兑换终端<br>Foreigen Currency Exchange</p>
+        <p class="ch2">旧钞兑换找零终端<br>Old to new banknote<br/>Exchange Equipment</p>
+        <p class="en2">零钞自助兑换终端<br>RMB auto-Exchange terminal<br></p>
+        </span>
+      </div>
+    </div>
+
+    <div class="banner4 banner">
+      <div id="banner4">
+        <h1>自助服务终端</h1>
+        <span class="word">
+        <p class="ch1">医疗</p>
+        <p class="en1">Medical</p>
+        <p class="ch2">一站式自助服务系统</p>
+        <p class="en2">Medical Center Self-Service Systems</p>
+        </span>
+      </div>
+    </div>
+</section>
+
+<footer id="slide-btn">
+	<ul>
+		<li class='active' ng-click="change_slide(0)"></li>
+		<li ng-click="change_slide(1)"></li>
+		<li ng-click="change_slide(2)"></li>
+		<li ng-click="change_slide(3)"></li>
+		<!--li ng-click="change_slide(4)"></li-->
+	</ul>
+</footer>
+<section id="content" class="clearfix">
+	<aside id="news">
+		<header id="news-header">
+			最新资讯
+		</header>
+		<section>
+			      <div class="current-news clearfix">
+				     <a ng-href="/about/4/1"><img class="current-newsimg" ng-src="{{img}}" />
+                        <span><img  ng-src="/static/images/iconImg/homenew.png"></span>
+				       <p class="first-title">{{first_title}}<br></p><span></span>
+				       <p class="second-title">{{second_title}}</p>
+
+                       <p class="keyword" id="keyword">{{keyword}}</p>
+                     </a>
+			      </div>
+            <ul>
+
+				<li><a href="/about/4/2"><span class="other-title">{{tip2}}</span></a></li>
+				<li><a href="/about/4/3"><span class="other-title">{{tip3}}</span></a></li>
+                <li><a href="/about/4/4"><span class="other-title">{{tip4}}</span></a></li>
+			</ul>
+		</section>
+	</aside>
+	<aside id="solutions">
+
+        <div id="solution-description">
+			<div class="solution-description " ng-repeat="item in tips" ng-class="{active: 0 == $index}">
+				<header class="solution-description-header">
+                    {{item.category}}
+				</header>
+				<div class="solution-description-content">
+                    <a ng-href="{{item.product_url}}">
+					<img ng-src="{{item.img_url}}" />
+					<h1>方案背景</h1>
+					<p> {{item.tip}}</p></a>
+				</div>
+			</div>
+        </div>
+
+	
+		<div id="solution-category">
+            <ul>
+                <li  ng-repeat="tip in tips">
+                	<a ng-href="{{tip.product_url}}" ng-mouseover="MouseOverTips(tip,$index)" ng-class="{active: 0 == $index}" ng-class-fix >{{tip.category}}</a>
+                </li>
+            </ul>
+
+		</div>
+
+
+	</aside>
+	<aside id="contact">
+		<header id="contact-header">联系我们</header>
+		<ul>
+			<li>电&nbsp;&nbsp;话：0756-6865889 0756-6865890</li>
+			<li>传&nbsp;&nbsp;真：0756-2265162</li>
+			<li>地&nbsp;&nbsp;址：珠海市南屏科技园屏工西路11号</li>
+		</ul>
+		<div>
+			<p>产品维护与各方面相关问题</p>
+			<a href="/supports/1" class="button_blue">技术支持</a>
+		</div>
+		<div>
+			<p>产品维护与各方面相关问题</p>
+			<a href="/contact/2"  class="button_blue" >在线咨询</a>
+		</div>
+	</aside>
+</section>
+

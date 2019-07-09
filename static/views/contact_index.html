@@ -1,0 +1,17 @@
+<div id="inside-page">
+	<nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow" ></nav>
+
+	<article id="contact_list" class="inside-page-content">
+
+	    <header id="inside-page-header">
+	    	<p>{{contact_list.description}}</p>
+	    </header>
+
+
+	    <div>
+	        <p  id="contact-us" ng-bind-html="contact_list.information"></p>
+            <iframe ng-show="contact_list.id == 2" id="baidu-map" width="700" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="/static/views/baidu_map.html"></iframe>
+	    </div>
+
+	</article>
+</div>

@@ -1,0 +1,64 @@
+<div id="inside-page">
+	<nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+
+	<section id="solutions-list" class="clearfix inside-page-content">
+	    <header id="inside-page-header">
+	    	<p>{{solutions_list.description}}</p>
+	    </header>
+        <div id="solution-content">
+
+            <div>
+	           <h3>{{solutions_list.title[0]}}</h3>
+                <ul><li ng-repeat="item in solutions_list.background">
+                    <p>{{item}}</p></li>
+                </ul>
+            </div>
+            <div>
+                <h3>{{solutions_list.title[1]}}</h3>
+                <ul><li ng-repeat="item in solutions_list.requirement">
+                    <p>{{item}}</p></li>
+                </ul>
+            </div>
+            <div>
+                <h3>{{solutions_list.title[2]}}</h3>
+                <ul><li ng-repeat="item in solutions_list.spread">
+                    <p>{{item}}</p></li>
+                </ul>
+            </div>
+            <div>
+                <h3>{{solutions_list.title[3]}}</h3>
+                <ul><li ng-repeat="item in solutions_list.reaction">
+                    <p>{{item}}</p></li>
+                </ul>
+                <ul ng-repeat="img in solutions_list.showimg">
+                    <li class="bold">
+                        <h4>{{img.title}}</h4>
+                        <h5>{{img.name}}</h5>
+                        <img ng-src="{{img.image}}">
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>{{solutions_list.title[4]}}</h3>
+                <ul><li ng-repeat="table in solutions_list.function">
+                      <p class="bold">{{table.title}}</p>
+                      <table>
+                        
+                        <tr ng-repeat="item in table.content" ng-class="{active: $index==0}">
+                            <td >{{item.no}}</td>
+                            <td >{{item.name}}</td>
+                            <td class="long"><ul ng-repeat="slip in item.information"><li>{{slip}}</li></ul></td>
+                        </tr>
+                      </table>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>{{solutions_list.title[5]}}</h3>
+                <ul><li ng-repeat="item in solutions_list.result">
+                    <p>{{item}}</p></li>
+                </ul>
+            </div>
+        </div>
+	</section>
+</div>

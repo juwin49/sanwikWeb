@@ -1,0 +1,44 @@
+
+<div id="inside-page">
+	<nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+
+	<article id="joinus-list" class="inside-page-content">
+	    <header id="inside-page-header">
+	    	<p>{{joinus_list.description}}</p>
+	    </header>
+
+        <section ng-if="joinus_list.surroundingimg" id="joinus_environment">
+            <img ng-src="{{joinus_list.surroundingimg}}" />
+        </section>
+
+        <div class="information" >
+            <div id="inforback"  ng-repeat="information in joinus_list.information">
+              <p id="inforitem"  ng-bind-html="information.item"></p>
+              <ol >
+                <li class="title" ng-if="information.duty"><p>岗位职责：</p>
+                    <ol class="content" ><li ng-repeat="duties in information.duty"><span>◆</span>{{duties}}</li></ol>
+                </li>
+              </ol>
+              <ol >
+                <li class="title" ng-if="information.require"><p>岗位要求：</p>
+                     <ol class="content" ><li ng-repeat="requires in information.require"><span>◆</span>{{requires}}</li></ol>
+                </li>
+                <li class="title" ng-if="information.other"><p>or</p>
+                      <ol class="content" ><li ng-repeat="other in information.other"><span>◆</span>{{other}}</li></ol>
+                </li>
+              </ol>
+            </div>
+
+            <div ng-if="joinus_list.information" id="float">
+                <div class="float">
+                    <p>联系人：黄女士<br>电话：0756-8818930<br>
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2775863783&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2775863783:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+                    </p>
+                </div>
+            </div>
+
+	    </div>
+
+
+	</article>
+</div>

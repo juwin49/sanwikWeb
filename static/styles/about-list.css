@@ -1,0 +1,287 @@
+    #about-us{
+        width:720px;
+        float: right;
+    }
+
+/*******about_sanwik.html样式********************************************************************/
+    #about-us #about-sanwik{
+        width:720px;
+    }
+
+	#about-us #about-sanwik h1 {
+		text-align:  center;
+		font-size: 2.2em;
+		color: #333333;
+
+		
+	}
+
+	#about-us #about-sanwik .title {
+		color: #333;
+		letter-spacing: 1px;
+
+		text-align: center;
+		font-size: 1.1em;
+
+		line-height: 2em;
+		margin-top:  20px;
+	}
+
+
+
+	#about-us #about-sanwik section {
+		margin-top: 20px;
+	}
+
+	#about-us #about-sanwik img {
+        width:720px;
+        float: left;
+		margin: 15px;
+		border-radius: 3px;
+		border: 1px solid #eee;
+		box-shadow: 0 1px 3px #bbb;
+	}
+
+    #about-us #about-sanwik .lead{
+        font-weight: bold;
+    }
+
+
+	#about-us #about-sanwik p {
+		text-indent: 30px;
+		padding-bottom: 10px;
+		line-height:1.8em;
+		font-size: .9em;
+		color: #333;
+	}
+
+/*
+	#about-us .dotted {
+		border-top:  #dfdede dashed;
+		border-width: 1px 0 0;
+		height: 0px;
+		margin-top: 20px;
+		margin-bottom: 19px;
+	}
+
+	#about-us  .left h1 {
+		text-align: right;
+	}
+
+
+	#about-us .screenshot img {
+		padding: 3px;
+		border-radius: 3px;
+		border: 1px solid #ccc;
+		box-shadow: 0 1px 3px #ccc;
+	}
+
+	#about-us  .justify dd {
+		line-height: 1.6em;
+		list-style: disc;
+		color: #777;
+		text-indent: 30px;
+	}
+*/
+
+
+/*******about_strength.html样式********************************************************************/
+    #about-us #about-strength{
+        width:720px;
+    }
+
+    #about-us #about-strength .lead{
+        font-size: 1.4em;
+        color:#333333;
+        line-height: 2.4em;
+        padding-top:10px;
+
+    }
+
+    #about-us #about-strength p{
+        text-indent: 30px;
+        line-height: 1.8em;
+        font-size: 0.95em;
+        color: #333;
+
+    }
+
+    #about-us #about-strength p.bold{
+        font-weight: bold;
+
+    }
+
+    #about-us #about-strength .patent{
+        width: 720px;
+        display: table;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #about-us  #about-strength .img{
+        width: 200px;
+        height: 300px;
+    }
+
+    #about-us  #about-strength .file{
+        width: 300px;
+        height: 220px;
+    }
+
+    #about-us #about-strength .img , #about-strength .file{
+        display: table-cell;
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        padding:15px 15px 40px 15px;
+    }
+    #about-us  #about-strength a{
+        padding-left: 10px;
+        color: #198cce;
+
+        text-decoration: none;
+    }
+    #about-us  #about-strength a:hover, #about-us  #about-strength a.active{
+        text-decoration: underline;
+    }
+
+
+    #about-us #about-strength img{
+
+        border: 1px solid #ebebeb;
+    }
+
+    #about-us #about-strength span {
+        *display: block;
+        *text-align: center;
+        color: #777;
+        font-size: .8em;
+    }
+
+
+
+/*******about_cultural.html样式********************************************************************/
+
+    #about-us #about-cultural img {
+        float: right;
+        width: 360px;
+        height: 260px;
+        margin: 50px 15px;
+        border-radius: 3px;
+        border: 1px solid #eee;
+        box-shadow: 0 1px 3px #bbb;
+    }
+
+    #about-us #about-cultural p{
+        text-indent: 20px;
+        font-size: 0.9em;
+        color: #333;
+
+    }
+    #about-us #about-cultural p.lead{
+
+       font-size: 1.05em;
+       font-weight: bold;
+        padding-top: 15px;
+    }
+    #about-us #about-cultural p.eng{
+        font-size: .8em;
+        font-weight: bold;
+        line-height: 1.5em ;
+
+    }
+
+
+
+/***************************about_patent.html****************************************/
+    #about-us  #about-patent {
+        width: 720px;
+        height:700px ;
+        display: table;
+    }
+
+    #about-us  #about-patent li{
+        text-align: center;
+        vertical-align: middle;
+        float: left;
+        display: table-cell;
+        padding:20px;
+        width: 100px;
+    }
+    #about-us  #about-patent #smallimg{
+        width:100px;
+        height: 150px;
+    }
+    #about-us  #about-patent #smallimg img{
+        position: relative;
+        z-index: 1;
+        width:100px;
+        height: 150px;
+        border: 1px solid #ebebeb;
+    }
+    #about-us  #about-patent #bigimgdiv {
+        position: absolute;
+        z-index: 6;
+        width: 800px;
+        height: 150px;
+        overflow: hidden;
+        border: 1px solid #888;
+        display: none;
+    }
+    #about-us  #about-patent #bigimgdiv img{
+        width: 800px;
+        height: 1187px;
+        position: absolute;
+        z-index: 7;
+        display: none;
+    }
+    #about-us  #about-patent #smallimg a{
+        position: relative;
+        z-index: 3;
+        top:-30px;
+        left: 36px;
+        border-radius: 3px;
+        border: 1px solid #eee;
+    }
+    #about-us  #about-patent #samllimg a:hover{
+        border: 1px solid #888;
+    }
+    #about-us  #about-patent #smallimg i{
+        padding: 5px;
+    }
+
+    #about-us #about-patent span{
+        *display: block;
+        *text-align: center;
+        color: #777;
+        font-size: 12px;
+    }
+    #about-patent #patent-content{
+        margin-top:30px;
+    }
+
+    #about-patent #patent-page{
+        float:right;
+        padding: 120px 40px 50px ;
+
+    }
+
+    #about-patent .foot a{
+        float:left;
+        text-align:center;
+        vertical-align:middle;
+        height:25px;
+        line-height:25px;
+        width: 80px;
+        text-decoration: none;
+    }
+
+    #patent-page input{
+        width: 80px;
+        padding-left: 15px;
+        border:1px solid #a0a0a0;
+    }
+
+
+

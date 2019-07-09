@@ -1,0 +1,33 @@
+<div id="inside-page" class="clearfix">
+  <nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+  <article id="about-us" class="clearfix inside-page-content">
+      <header id="inside-page-header">
+          <p>企业新闻</p>
+      </header>
+	<section id="news-list" >
+
+		<div class="row">
+            <div ng-repeat="news in news_list |offset: currentpage*pagesize| limitTo: pagesize">
+              <a class="news-title" ng-href="/about/4/{{news.id}}">
+                <div class="time">
+			      <h1>{{news.title}}<img ng-if="news.icon_img"  ng-src="{{news.icon_img}}"></h1>
+
+			      <span>{{news.time}}</span>
+                </div>
+              </a>
+            </div>
+		</div>
+        <div class="foot">
+           <div id="news-page" >
+                <a ng-click="firstPage()">首页</a>
+                <a ng-click="prevPage()">上一页</a>
+                <a>{{currentpage+1}}/{{pagecount}}</a>
+                <a ng-click="nextPage()">下一页</a>
+                <a ng-click="lastPage()">尾页</a>
+                <input type="text"  ng-model="inputPage">
+                <button ng-click="gotoPage(inputPage)">go</button>
+           </div>
+        </div>
+	</section>
+  </article >
+</div>

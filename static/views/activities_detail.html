@@ -1,0 +1,32 @@
+<div id="inside-page">
+
+    <nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+    <section id="news-detail" class="clearfix inside-page-content">
+        <div id="activies-title">
+            <h1>{{activities.title}}</h1>
+            <span>{{activities.time}}</span>
+        </div>
+<!--        <div id="summary"><div><p>{{activities.summary}}</p></div></div>-->
+        <div id="activityimg">
+            <div id="activitylarge">
+                <div id="left" ><a><span ng-click="preImg()"><i class="fa fa-chevron-left " ></i></span></a></div>
+                <div id="activitymiddle"><div class="table-cell"><a><img ng-src="{{currentImg}}"></a></div></div>
+                <div id="right" ><a><span ng-click="nextImg()"><i class="fa fa-chevron-right "></i></span></a></div>
+            </div>
+            <div id="small">
+                <div id="small-block">
+			       <span  ng-repeat="detail in activities.large_img" ng-click="choose_img($index)" ng-class="{active: $index==0}" >
+				        <img  ng-src="{{detail}}" />
+			       </span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="intro" ><p ng-repeat="content in activities.p">{{content}}</p></div>
+
+
+    </section>
+
+</div>

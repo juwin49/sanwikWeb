@@ -1,0 +1,34 @@
+
+<div id="inside-page">
+    <nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+    
+	<article id="supports_list" class="inside-page-content">
+
+	    <header id="inside-page-header">
+	    	<p>{{supports_list.description}}</p>
+	    </header>
+
+        <!--div>
+            <p ng-bind-html="supports_list.information"></p>
+        </div-->
+        <div id="supports-content" >
+            <div id="supports-service">
+               <ol >
+                  <li ng-repeat="describe in supports_list.describe">{{describe.item}}
+                      <ol class="more" ><li ng-repeat="point in describe.content"><span>◆</span>{{point}}</li></ol>
+                  </li>
+               </ol>
+            </div>
+
+            <div id="supports-table">
+               <table>
+                  <tr ng-repeat="information in supports_list.information" ng-class="{active: $index==0}">
+                    <td >{{information.item}}</td>
+                    <td > <ul ng-repeat="slip in information.content"><li>{{slip}}</li></ul></td>
+                  </tr>
+               </table>
+            </div>
+        </div>
+
+	</article>
+</div>

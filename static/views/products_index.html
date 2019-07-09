@@ -1,0 +1,29 @@
+<div id="inside-page" class="clearfix">
+	<nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+	<section id="products-list" class="clearfix inside-page-content">
+
+	    <header id="inside-page-header">
+	    	<p>{{describe.category}}</p>
+	    </header>
+
+        <div id="products-content">
+
+            <div class="describe">
+               <h4>方案背景</h4>
+                <ul ng-repeat="item in describe.information">
+                    <li><p>{{item}}</p></li>
+                </ul>
+               <h4>方案优势</h4>
+               <ul ng-repeat="point in describe.advantage">
+                    <li><span>◆</span>{{point}}</li>
+               </ul>
+            </div>
+		     <div class="products" ng-repeat="product in products_list">
+			    <a class="img" ng-href="{{product.detail_url}}">
+				   <img ng-src="{{product.thumbnail}}" />
+				   <span>{{product.name}}</span>
+			    </a>
+		     </div>
+        </div>
+	</section>
+</div>

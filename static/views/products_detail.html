@@ -1,0 +1,119 @@
+<div id="inside-page">
+
+  <nav ng-include="SecondaryNavTemplate" class="clearfix" id="secondary-nav" ng-if="SecondaryNav !==  null" ng-controller="SecondaryNavShow"></nav>
+
+  <section id="products-detail" class="clearfix inside-page-content">
+	    <header id="inside-page-header">
+	    	<p>产品展示</p>
+	    </header>
+
+		<aside id="small-img">
+			<span ng-repeat="detail in products_detail.small_img" ng-mouseover="change_img($index)"  ng-class="{active: $index==0}">
+				<img ng-src="{{detail}}" />
+			</span>
+		</aside>
+
+		<aside id="large-img">
+			<img ng-src="{{detail}}" ng-repeat="detail in products_detail.large_img" ng-class="{active: $index==0}" />
+		</aside>
+
+		<aside id="description">
+			<h2><i>No. {{products_detail.no}}</i></h2>
+			<h1>{{products_detail.name}}</h1>
+			<p>{{products_detail.use}}</p>
+			<ul ng-repeat="detail in products_detail.description">
+				<li>{{detail}}</li>
+			</ul>
+           <a ng-href="{{products_detail.class_rul}}"> <button>查看同类产品</button> </a>
+			<!--button ng-click="load_detail()">查看详情</button-->
+		</aside>
+      <!--section id="detail-display">
+          <div id="detail-imgs">
+
+          </div>
+          <div id="detail-display-loading">
+                <img src="images/loading.gif" />
+          </div>
+      </section-->
+      <!--section>
+          <div><img ng-repeat="item in products_detail.detail" ng-src="{{item}}"></div>
+      </section-->
+
+
+    <div id="detail-show">
+      <div id="detail-title">
+         <a><ul >
+            <li  ng-repeat="tip in products_detail.detai" ng-click="choose($index)" ng-class="{active: $index==0}" >
+                <p>{{tip.name}}</p>
+            </li>
+         </ul></a>
+      </div>
+      <div id="detail-content" >
+        <!--div id="function" class="">
+
+            <img ng-src="{{products_detail.function[0].img}}">
+            <div ng-repeat="item in products_detail.function" ng-class="{active:$index!=0}">
+                <div><p class="function-head">{{item.name}}</p><span>{{item.eng}}</span></div>
+                <ul><li ng-repeat="func in item.fun"><span>◆</span>{{func.name}}<p>{{func.detail}}</p></li>
+                    <li ng-repeat="lip in item.content"><span>◆</span>{{lip}}</li></ul>
+            </div>
+        </div>
+
+
+        <div id="operate">
+            <p>快捷简单的用户操作，<span>化繁为简</span>的<span>设计</span></p>
+            <div ng-repeat="item in products_detail.operate"><img ng-src="{{item}}" ></div>
+        </div>
+
+
+        <div id="manage">
+            <div id="manage-p">
+                <p>便捷安全的管理员操作</p>
+                <p class="blue">智能化的管理系统</p>
+                <span class="blue">Safe and stable and reliable</span>
+            </div>
+            <div id="manage-word">
+               <span ng-repeat="item in products_detail.manage.adv">{{item}}</span>
+               <li ng-repeat="item in products_detail.manage.feature"><span>◆</span>{{item}}</li>
+            </div>
+            <div id="manage-img">
+                <img ng-src="{{products_detail.manage.img}}">
+            </div>
+        </div>
+
+
+        <div id="parameter">
+            <P>自助充值终端<span>技术参数</span></P>
+            <table>
+                <tr ng-repeat="item in products_detail.parameter" ng-class="{active: $index==0}">
+                    <td >{{item.name}}</td>
+                    <td ><ul ng-repeat="slip in item.content"><li>{{slip}}</li></ul></td>
+                </tr>
+            </table>
+        </div-->
+        <div id="function">
+            <img ng-src="{{products_detail.function}}">
+        </div>
+        <div id="operate">
+            <img ng-src="{{products_detail.operate}}">
+        </div>
+        <div id="manage">
+            <img ng-src="{{products_detail.manage}}">
+        </div>
+        <div id="parameter">
+            <P><i class="fa fa-square"></i>&nbsp自助设备终端<span>技术参数</span></P>
+            <table>
+               <tr ng-repeat="item in products_detail.parameter" ng-class="{active: $index==0}">
+                    <td >{{item.name}}</td>
+                    <td class="long" ><ul ng-repeat="slip in item.content"><li>{{slip}}</li></ul></td>
+               </tr>
+            </table>
+        </div>
+        <div id="auto">
+            <ul><li ng-repeat="item in products_detail.auto"><span>◆</span>{{item}}</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
